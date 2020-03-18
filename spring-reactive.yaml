@@ -15,7 +15,7 @@ resilience4j.circuitbreaker:
         - java.util.concurrent.TimeoutException
         - org.springframework.web.client.ResourceAccessException
       ignoreExceptions:
-        - com.gl.orderManagementApp.service.MyException
+        - com.simple.exception.MyException
     service2:
       registerHealthIndicator: true
       ringBufferSizeInClosedState: 6
