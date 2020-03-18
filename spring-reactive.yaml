@@ -33,7 +33,7 @@ resilience4j.ratelimiter: #to control DoS attacks
 
 resilience4j.retry:
   instances: prometheusMeterRegistry
-    retryService1:
+    service1:
       maxRetryAttempts: 5
       waitDuration: 10000
 
