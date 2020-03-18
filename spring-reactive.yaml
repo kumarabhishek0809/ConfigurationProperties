@@ -5,6 +5,7 @@ resilience4j.circuitbreaker:
   instances:
     service1:
       registerHealthIndicator: true
+      slidingWindowSize: 100
       ringBufferSizeInClosedState: 5 #it will determine if closed or open
       ringBufferSizeInHalfOpenState: 3 # 3 calls will try
       waitDurationInOpenState: 10s # wait for 50
@@ -31,7 +32,7 @@ resilience4j.ratelimiter: #to control DoS attacks
       timeoutDuration: 1000ms
 
 resilience4j.retry:
-  instances:prometheusMeterRegistry
+  instances: prometheusMeterRegistry
     retryService1:
       maxRetryAttempts: 5
       waitDuration: 10000
