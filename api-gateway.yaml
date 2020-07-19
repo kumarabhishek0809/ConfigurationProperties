@@ -5,7 +5,7 @@ eureka:
     serviceUrl:
       defaultZone: ${EUREKA_URI:http://localhost:8761}
     fetchRegistry: true
-    registerWithEureka: false
+    registerWithEureka: true
 
 ribbon:
   eureka:
