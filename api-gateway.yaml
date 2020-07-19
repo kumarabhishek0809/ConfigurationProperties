@@ -5,7 +5,3 @@ eureka:
       defaultZone: ${EUREKA_URI:http://localhost:8761}
   register-with-eureka: true
   fetch-registry: true
-
-
-management.endpoints.web.exposure.include: '*'
-management.endpoint.health.show-details: always
