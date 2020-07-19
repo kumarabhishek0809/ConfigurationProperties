@@ -7,6 +7,27 @@ eureka:
     fetchRegistry: true
     registerWithEureka: true
 
+zuul:
+  routes:
+    token:
+      url: http://localhost:8085
+    simple-service:
+      path: /simple-service/**
+      serviceId: simple-service
+    booking-service:
+      path: /booking-service/**
+      serviceId: booking-service
+    checkin-service:
+      path: /checkin-service/**
+      serviceId: checkin-service
+    registration-service:
+      path: /registration-service/**
+      serviceId: registration-service
+    oauth-server:
+      path: /oauth-server/**
+      serviceId: oauth-server
+  prefix: /api
+
 ribbon:
   eureka:
     enabled: false
