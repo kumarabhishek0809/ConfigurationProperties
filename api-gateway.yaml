@@ -1,11 +1,17 @@
 debug: true
 
+spring:
+  application:
+    name: api-gateway
+    
 eureka:
   client:
     serviceUrl:
       defaultZone: ${EUREKA_URI:http://localhost:8761}
     fetchRegistry: true
     registerWithEureka: true
+    instance:
+      instance-id: ${spring.application.name}:${instanceId:${random.value}}
 
 ribbon:
   eureka:
