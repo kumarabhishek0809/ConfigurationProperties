@@ -8,8 +8,8 @@ eureka:
     fetchRegistry: true
   instance:
     lease-renewal-interval-in-seconds: 5
-    instance-id: ${spring.cloud.client.hostname}:${spring.application.name}:${spring.application.instance_id:${random.value}}
-
+    instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
+    
 ribbon:
   eureka:
     enabled: false
