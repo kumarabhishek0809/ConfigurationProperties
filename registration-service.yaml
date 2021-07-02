@@ -8,7 +8,7 @@ eureka:
     fetchRegistry: true
   instance:
     lease-renewal-interval-in-seconds: 5
-    instance-id: ${spring.application.name}:${instanceId:${random.value}}
+    instance-id: ${spring.application.name}:${instanceIdKumar:${random.value}}
 
 spring:
   rabbitmq:
