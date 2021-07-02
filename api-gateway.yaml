@@ -13,3 +13,12 @@ eureka:
 ribbon:
   eureka:
     enabled: false
+    
+management:
+  endpoint:
+    prometheus:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: prometheus,info,health,refresh, bus-refresh, beans, env
