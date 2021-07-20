@@ -10,13 +10,6 @@ eureka:
     lease-renewal-interval-in-seconds: 5
     instanceId: ${spring.application.name}:${vcap.application.instance_id:${spring.application.instance_id:${random.value}}}
 
-spring:
-  rabbitmq:
-    host: localhost
-    port: 5672
-    username: guest
-    password: guest
-
 management:
   endpoint:
     prometheus:
